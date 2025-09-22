@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nepenthe Stylee - Tailwind Instagram Clone</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Alpine.js buat tab -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-black text-white min-h-screen">
+
+  <div class="max-w-5xl mx-auto px-4 py-6" x-data="{ tab: 'posts' }">
+
+    <!-- Header Profil -->
+    <div class="grid grid-cols-3 md:grid-cols-4 gap-4 items-center">
+      <!-- Avatar -->
+      <div class="col-span-1 flex justify-center md:justify-start">
+        <img src="img/logo profil.jpg" alt="Profile Avatar"
+          class="w-24 h-24 md:w-36 md:h-36 rounded-full object-cover border-2 border-gray-600 shadow-lg" />
+      </div>
+
+      <!-- Info -->
+      <div class="col-span-2 md:col-span-3 space-y-2">
+        <div class="flex flex-wrap items-center gap-2">
+          <h2 class="text-xl md:text-2xl font-semibold">nepenthe.stylee</h2>
+          <!-- Tombol responsive order -->
+          <div class="flex gap-2 ml-auto">
+            <button class="order-2 md:order-1 px-3 py-1 text-sm border border-gray-400 rounded hover:bg-gray-800">
+              Edit Profile
+            </button>
+            <button class="order-1 md:order-2 px-3 py-1 text-sm bg-blue-500 rounded hover:bg-blue-600">
+              Follow
+            </button>
+          </div>
+        </div>
+
+        <p class="font-semibold">Nepenthe</p>
+        <p class="text-sm">Clothing (Brand)</p>
+        <p class="text-sm">RESELLER TERBAIK</p>
+        <p class="text-sm">AVAILABLE ONLY ON SHOPEE 🙌</p>
+      </div>
+    </div>
+
+    <!-- Statistik -->
+    <div class="grid grid-cols-3 text-center border-t border-b border-gray-700 my-6 py-3">
+      <div>
+        <span class="font-bold">12</span><br />
+        <span class="text-sm">posts</span>
+      </div>
+      <div>
+        <span class="font-bold">11k</span><br />
+        <span class="text-sm">follower</span>
+      </div>
+      <div>
+        <span class="font-bold">111</span><br />
+        <span class="text-sm">following</span>
+      </div>
+    </div>
+
+    <!-- Tabs Navigasi -->
+    <div class="flex justify-center border-t border-b border-gray-700">
+      <button class="px-4 py-2 flex items-center gap-2"
+              :class="tab === 'posts' ? 'font-semibold text-white border-t-2 border-white' : 'text-gray-400'"
+              @click="tab = 'posts'">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4 4h6v6H4zm0 10h6v6H4zm10-10h6v6h-6zm0 10h6v6h-6z"/>
+        </svg>
+        Posts
+      </button>
+      <button class="px-4 py-2 flex items-center gap-2"
+              :class="tab === 'reels' ? 'font-semibold text-white border-t-2 border-white' : 'text-gray-400'"
+              @click="tab = 'reels'">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4 4h16v16H4z" fill="none"/><path d="M10 8l6 4-6 4z"/>
+        </svg>
+        Reels
+      </button>
+      <button class="px-4 py-2 flex items-center gap-2"
+              :class="tab === 'tagged' ? 'font-semibold text-white border-t-2 border-white' : 'text-gray-400'"
+              @click="tab = 'tagged'">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8V22h19.2v-2.8c0-3.2-6.4-4.8-9.6-4.8z"/>
+        </svg>
+        Tagged
+      </button>
+    </div>
+
+    <!-- Konten Tabs -->
+    <div class="mt-4">
+      <!-- Posts -->
+      <div x-show="tab === 'posts'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+  <img src="img/post1.jpg" class="w-full h-60 object-cover" alt="Post 1" />
+  <img src="img/post2.jpg" class="w-full h-60 object-cover" alt="Post 2" />
+  <img src="img/post3.jpg" class="w-full h-60 object-cover" alt="Post 3" />
+  <img src="img/post4.jpg" class="w-full h-60 object-cover" alt="Post 4" />
+  <img src="img/post5.jpg" class="w-full h-60 object-cover" alt="Post 5" />
+  <img src="img/post6.jpg" class="w-full h-60 object-cover" alt="Post 6" />
+  <img src="img/post7.jpg" class="w-full h-60 object-cover" alt="Post 7" />
+  <img src="img/post8.jpg" class="w-full h-60 object-cover" alt="Post 8" />
+  <img src="img/post9.jpeg" class="w-full h-60 object-cover" alt="Post 9" />
+  <img src="img/post10.jpeg" class="w-full h-60 object-cover" alt="Post 10" />
+  <img src="img/post11.jpeg" class="w-full h-60 object-cover" alt="Post 11" />
+  <img src="img/post12.jpg" class="w-full h-60 object-cover" alt="Post 12" />
+</div>
+
+
+      <!-- Reels -->
+      <div x-show="tab === 'reels'" class="text-center py-10 text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 mb-3" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M10 8l6 4-6 4z"/>
+        </svg>
+        <p>Belum ada Reels</p>
+      </div>
+
+      <!-- Tagged -->
+      <div x-show="tab === 'tagged'" class="text-center py-10 text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 mb-3" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8V22h19.2v-2.8c0-3.2-6.4-4.8-9.6-4.8z"/>
+        </svg>
+        <p>Belum ada foto yang ditandai</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm mt-8">
+      © 2025 Nepenthe • Instagram Clone with Tailwind
+    </footer>
+
+  </div>
+
+</body>
+</html>

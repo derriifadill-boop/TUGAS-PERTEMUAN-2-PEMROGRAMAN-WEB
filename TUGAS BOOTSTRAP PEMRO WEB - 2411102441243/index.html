@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nepenthe Stylee - Instagram Clone</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="costum.css">
+</head>
+<body class="bg-dark text-white">
+
+  <div class="container py-4">
+
+    <!-- Header profil -->
+    <div class="row align-items-center">
+      <!-- Foto Profil -->
+      <div class="col-4 col-md-3 text-center">
+        <img src="img/logo profil.jpg"Profile Avatar" class="profile-avatar">
+      </div>
+      
+      <!-- Info Profil -->
+      <div class="col-8 col-md-9">
+        <div class="d-flex flex-wrap align-items-center mb-3">
+          <h4 class="me-3 mb-0">nepenthe.stylee</h4>
+          <button class="btn btn-outline-light btn-sm me-2 order-2 order-md-1">Following</button>
+          <button class="btn btn-outline-light btn-sm order-1 order-md-2">Message</button>
+        </div>
+        <p class="mb-1"><strong>Nepenthe</strong></p>
+        <p class="mb-1">Clothing (Brand)</p>
+        <p class="mb-1">RESELLER TERBAIK</p>
+        <p class="mb-1">AVAILABLE ONLY ON SHOPPE 🙌</p>
+      </div>
+    </div>
+
+    <!-- Statistik -->
+    <div class="row text-center mt-3 border-top border-bottom py-2">
+      <div class="col">
+        <strong>12</strong><br>posts
+      </div>
+      <div class="col">
+        <strong>11K</strong><br>follower
+      </div>
+      <div class="col">
+        <strong>111</strong><br>following
+      </div>
+    </div>
+
+    <!-- Tab navigasi -->
+<ul class="nav justify-content-center border-top border-bottom mt-4" id="profileTabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link text-white active" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts" type="button" role="tab">
+      <i class="bi bi-grid-3x3"></i> Posts
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link text-white" id="reels-tab" data-bs-toggle="tab" data-bs-target="#reels" type="button" role="tab">
+      <i class="bi bi-play-btn"></i> Reels
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link text-white" id="tagged-tab" data-bs-toggle="tab" data-bs-target="#tagged" type="button" role="tab">
+      <i class="bi bi-person-square"></i> Tagged
+    </button>
+  </li>
+</ul>
+
+<!-- Konten Tab -->
+<div class="tab-content mt-3">
+  <!-- Posts -->
+  <div class="tab-pane fade show active" id="posts" role="tabpanel">
+    <div class="row g-2">
+      <!-- 12 Postingan -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/baju.jpg" class="img-fluid post-img" alt="Post 1">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/celana.jpg" class="img-fluid post-img" alt="Post 2">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/hoodie.jpg" class="img-fluid post-img" alt="Post 3">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/jaket.jpg" class="img-fluid post-img" alt="Post 4">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/jersey.jpg" class="img-fluid post-img" alt="Post 5">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/kaos kaki.jpg" class="img-fluid post-img" alt="Post 6">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/sepatu.jpg" class="img-fluid post-img" alt="Post 7">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/sweater.jpg" class="img-fluid post-img" alt="Post 8">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/sweatpants.webp" class="img-fluid post-img" alt="Post 9">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/topi.jpeg" class="img-fluid post-img" alt="Post 10">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/vest.jpeg" class="img-fluid post-img" alt="Post 11">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="img/work jaket.jpeg" class="img-fluid post-img" alt="Post 12">
+      </div>
+    </div>
+  </div>
+
+  <!-- Reels -->
+  <div class="tab-pane fade text-center py-5" id="reels" role="tabpanel">
+    <i class="bi bi-play-btn display-4 d-block mb-3"></i>
+    <p>Belum ada Reels</p>
+  </div>
+
+  <!-- Tagged -->
+  <div class="tab-pane fade text-center py-5" id="tagged" role="tabpanel">
+    <i class="bi bi-person-square display-4 d-block mb-3"></i>
+    <p>Belum ada foto yang ditandai</p>
+  </div>
+</div>
+
+    <!-- Similar Accounts -->
+    <div class="mt-5">
+      <h6 class="text-white">Similar Accounts</h6>
+      <div class="d-flex align-items-center mb-2">
+        <img src="img/miracle.jpg"sim1" class="similar-avatar me-2">
+        <div>
+          <strong>miraclemates</strong><br>
+          <small class="text-secondary">Clothing Brand</small>
+        </div>
+        <button class="btn btn-sm btn-outline-light ms-auto">Follow</button>
+      </div>
+      <div class="d-flex align-items-center mb-2">
+        <img src="img/chmb.jpg"sim2" class="similar-avatar me-2">
+        <div>
+          <strong>chambredelavain</strong><br>
+         <small class="text-secondary">Clothing Brand</small>
+        </div>
+        <button class="btn btn-sm btn-outline-light ms-auto">Follow</button>
+      </div>
+      <div class="d-flex align-items-center mb-2">
+        <img src="img/prfc.jpg"sim3" class="similar-avatar me-2">
+        <div>
+          <strong>prefacewearhouse</strong><br>
+          <small class="text-secondary">Clothing Brand</small>
+        </div>
+        <button class="btn btn-sm btn-outline-light ms-auto">Follow</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5 mb-3 text-secondary">
+      <small>&copy; 2025 Nepenthe. Instagram Clone</small>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
